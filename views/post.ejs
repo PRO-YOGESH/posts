@@ -1,0 +1,19 @@
+<%-include("parsels/header.ejs")-%>
+<div class="post-image">
+  <img src="data:image/<%=newPostImageInejs.contentType%>;base64,<%=newPostImageInejs.data.toString('base64')%>"
+  alt='Image' style="width: 400px; height: 300px">
+</div>
+<div class="post-heading">
+  <h1><%=newPostTitleInejs%></h1>
+</div>
+<div class="post-body">
+  <p> <%=newPostBodyInejs%> </p>
+</div>
+
+
+
+<%if (newPostBodyInejs.length<2900) {%>
+  <%-include("parsels/footer.ejs")-%>
+<% } else { %>
+<%-include("parsels/footer-down.ejs")-%>
+<% } %>

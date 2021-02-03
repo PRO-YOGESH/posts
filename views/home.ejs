@@ -1,0 +1,19 @@
+<%-include("parsels/header.ejs")-%>
+<h1>Home</h1>
+
+<p> <%=homeStartingContentInejs%> </p>
+<%postsInejs.forEach(function(postInejs){%>
+<h2><%=postInejs.postTitle%></h2>
+<p>
+  <%=postInejs.postBody.substring(0,100) + "..."%>
+  <a href="/posts/<%=postInejs._id%>">read more</a>
+</p>
+
+<%})%>
+
+
+<%if (postsInejs.length<3) {%>
+  <%-include("parsels/footer.ejs")-%>
+<% } else {%>
+<%-include("parsels/footer-down.ejs")-%>
+<%}%>

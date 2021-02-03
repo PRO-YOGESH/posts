@@ -1,0 +1,22 @@
+<%-include("parsels/header.ejs")-%>
+
+<div class="">
+  <h1>Compose</h1>
+  <form class="" action="/compose" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+      <label>Title</label>
+      <input class="form-control" type="text" name="postTitle" value="">
+      <div>
+                  <label for="image">Upload Image</label>
+                  <input type="file"accept="image/*" onchange=" previewFile()" id="image"   name="file" value="" >
+
+              </div>
+      <label>Post</label>
+      <textarea class="form-control" name="postBody" rows="5" cols="10"></textarea>
+    </div>
+      <button class="btn btn-primary" type="submit" >publish</button>
+  </form>
+
+</div>
+
+<%-include("parsels/footer.ejs")-%>
