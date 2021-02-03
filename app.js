@@ -24,7 +24,7 @@ var upload = multer({
 
 
 
-mongoose.connect("mongodb+srv://",  {
+mongoose.connect("mongodb+srv://<your private mongoose url >",  {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false
